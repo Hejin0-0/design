@@ -45,12 +45,13 @@ class Petal {
 		this.opacity = this.w / 45; // w의 최대값이 45 이라서
 		this.xSpeed = 2 + Math.random(); // 2~3 px 사이값
 		this.ySpeed = 1 + Math.random(); // 1~2 px 사이값
-		this.flip = Math.random();
+		this.flip = Math.random(); // 날리면서 크기를 늘렸다 줄였다 하는 옵션
 		this.flipSpeed = Math.random() * 0.03;
 	}
 
 	draw() {
 		if (this.y > canvas.height || this.x > canvas.width) {
+			// 벽에 닿았을 때
 			this.x = -petalImg.width;
 			this.y = Math.random() * canvas.height * 2 - canvas.height;
 			this.xSpeed = 2 + Math.random();
