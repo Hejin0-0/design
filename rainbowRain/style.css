@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #000;
+	/* 넘친 내용들을 가림 */
+	overflow: hidden;
+	/*  뷰포트 너비의 100%임 */
+	height: 100vh;
+}
+
+i {
+	/* 위치를 고정 */
+	position: absolute;
+	/* 높이 지정(비가 내리면서 잔상으로 표현) */
+	height: 200px;
+	/* 그라데이션을 적용함 */
+	background: linear-gradient(transparent, #fff);
+	/* 물방울 처럼 보이게 함 */
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	animation: animate 5s linear infinite;
+}
+/* 색상 */
+i:nth-child(3n + 1) {
+	background: linear-gradient(transparent, #0ff);
+}
+i:nth-child(3n + 2) {
+	background: linear-gradient(transparent, #0f0);
+}
+i:nth-child(3n + 3) {
+	background: linear-gradient(transparent, #f00);
+}
+/* 애니메이션 */
+@keyframes animate {
+	0% {
+		/* 시작위치 */
+		transform: translateY(-200px);
+	}
+	100% {
+		/* 비가 내려가는 위치를 설정함. 뷰포트 높이만큼 끝냄 */
+		transform: translateY(calc(100vh + 200px));
+	}
+}
