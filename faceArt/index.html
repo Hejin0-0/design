@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=chrome" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Face Art</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section>
+			<p class="art"></p>
+		</section>
+	</body>
+	<script>
+		let p = document.querySelector(".art");
+
+		let decimal = parseInt(Math.random() * Math.pow(10, 20));
+
+		let binary = decimal.toString(2);
+		for (let i = 0; i < binary.length; i++) {
+			p.innerHTML += binary + binary;
+		}
+	</script>
+</html>

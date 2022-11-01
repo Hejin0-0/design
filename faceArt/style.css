@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+section {
+	height: 100vh;
+	overflow: hidden;
+	word-break: break-all;
+	background: #fff;
+}
+
+.art {
+	color: #fff;
+	writing-mode: horizontal-tb;
+	position: relative;
+	font-size: 0.9em;
+	letter-spacing: 0.2em;
+	line-height: 0.8em;
+	background: url(img01.jpg), url(img01.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 800px 600px;
+	background-repeat: no-repeat;
+	background-blend-mode: color-dodge;
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: number 50s infinite;
+	animation-direction: normal;
+	animation-timing-function: linear;
+}
+
+@keyframes number {
+	0% {
+		letter-spacing: 0.1em;
+	}
+	10% {
+		letter-spacing: 0.2em;
+	}
+	20% {
+		letter-spacing: 0.3em;
+	}
+	30% {
+		letter-spacing: 0.4em;
+	}
+	40% {
+		letter-spacing: 0.5em;
+	}
+	50% {
+		letter-spacing: 0.6em;
+	}
+	60% {
+		letter-spacing: 0.7em;
+	}
+	70% {
+		letter-spacing: 0.8em;
+	}
+	80% {
+		letter-spacing: 0.9em;
+	}
+	90% {
+		letter-spacing: 1em;
+	}
+	100% {
+		letter-spacing: 1.1em;
+	}
+}
